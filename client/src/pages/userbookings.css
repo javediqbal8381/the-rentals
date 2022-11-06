@@ -1,0 +1,72 @@
+
+.userbookings-card-container{
+margin-left: 20%; 
+margin-right: 20%; 
+
+}
+
+.user-booking-card{
+    padding: 1rem;
+    display: flex;
+    background-color: white;
+    box-shadow: rgb(255, 255, 255) 2px 3px 7px, rgb(255, 255, 255) 2px 3px 8px;
+    opacity: 0.8;
+    margin-bottom: 7%;
+    border-radius: 20px;
+    
+}
+
+.user-booked-car-right{
+    height: 8rem;
+    border:1px solid black;
+
+}
+
+.user-booking-card-left{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.user-booking-card-mid{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+@media(max-width:1344px){
+    .user-booking-card{
+        padding: 2em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        
+        
+        
+    }
+}
+
+@media(max-width:990px){
+   
+}
+
+
+
+@media(max-width:660px){
+    .user-booking-card-mid>.ist-p{
+       display: flex;
+       text-align: center;
+       flex-direction: column;
+       align-items: center;
+       justify-content: center;
+    }
+
+}
+
+@media(max-width:442px){
+    .userbookings-card-container{
+        margin-left: 10%; 
+        margin-right: 10%; 
+        
+        }
+}
