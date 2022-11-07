@@ -22,11 +22,11 @@
 
 
 .a-tag-site-logo {
-    color: rgb(255, 0, 170);
+    color: rgb(255, 255, 255);
     font-family: 'Orbitron', sans-serif;
     font-weight: bold;
     font-size: 15px;
-    border: 2px solid rgb(255, 0, 170);
+    border: 2px solid rgb(255, 0, 0);
     border-radius: 50%;
     padding: 10px;
     border-bottom: #b7d532;
@@ -407,8 +407,8 @@
     margin-top: 7px;
     background-color: transparent;
     border-radius: 30px;
-    border-color: rgb(255, 0, 0);
-    color: rgba(255, 0, 0, 0.747);
+    border-color: rgb(255, 255, 255);
+    color:white;
     font-family: cursive;
     font-size: 1rem;
 }
@@ -673,6 +673,12 @@
 
 
 }
+@media only screen and (max-width:508px) {
+    .landingpage-ist{
+        background-image: url('https://res.cloudinary.com/ddnrxtthk/image/upload/v1667792220/44_qte4iz.jpg') ;
+
+    }
+}
 
 
 @media(max-width:892px) {
@@ -741,3 +747,5 @@ display: none;
     }
     
 }
+
+

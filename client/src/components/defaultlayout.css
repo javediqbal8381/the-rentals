@@ -256,7 +256,7 @@
     background-color: transparent;
     border-radius: 30px;
     border-color: rgb(255, 1, 1);
-    
+    color: white;
     }
 
     .content-the-rentals{
@@ -274,11 +274,11 @@
   
 
     @media only screen and (max-width:508px) {
-        .default-layout{
-            background-image: url('https://res.cloudinary.com/ddnrxtthk/image/upload/v1667452304/back1_qfcrok.jpg') ;
-    
-        }
-    }
+      .default-layout{
+          background-image: url('https://res.cloudinary.com/ddnrxtthk/image/upload/v1667792220/44_qte4iz.jpg') ;
+  
+      }
+  }
   
 
   @media (max-width:898px){ 
@@ -291,7 +291,9 @@
       .mobile-menu {
          display: none;
  
-     }}
+     }
+     
+    }
 
 
 

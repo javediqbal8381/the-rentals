@@ -7,7 +7,6 @@ import { ImWhatsapp } from 'react-icons/im'
 import { SiGmail } from 'react-icons/si'
   import 'react-toastify/dist/ReactToastify.css';
 
-
 function DefaultLayout(props) {
   const[lights,setLights]=useState(false)
   function blinkLights(){
