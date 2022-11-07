@@ -105,7 +105,7 @@ setLights(current=>!current)  }
       </div>
 
 
-      <button className='blinkslights' onClick={blinkLights} style={{background:'red',marginTop:'20.5vh',position:'fixed',height:'10px',width:'20px'}}></button>
+      {/* <button className='blinkslights' onClick={blinkLights} style={{background:'red',marginTop:'20.5vh',position:'fixed',height:'10px',width:'20px'}}></button> */}
       <div className='blinking'>  
      {lights && <p className='blinking-light-left'>o</p>}       
        {lights && <p className='blinking-light-right'>o</p>}       
