@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Roboto:ital,wght@0,500;1,400&family=Space+Mono&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
-
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
@@ -9,7 +8,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: azure;
   color: white;
-
 }
 
 code {
@@ -17,101 +15,92 @@ code {
     monospace;
 }
 
-
-
-h1{
+h1 {
   font-size: 30px;
   font-weight: bold;
- color: slategray;
+  color: slategray;
 }
 
-
-
-
-.carimg{
+.carimg {
   height: 130px;
   width: auto;
   border-radius: 5px;
   transform: translateY(-60px);
   border: solid white;
-  
-
 }
-p{
-  margin:5px;
+p {
+  margin: 5px;
   text-align: right;
   padding: 0;
 }
-.car{
-
+.car {
   margin-top: 100px;
   border-radius: 5px;
   height: 150px;
   transition: 0.5s;
-
-  
 }
-.car:hover{
+.car:hover {
   height: 220px;
-  background-image: linear-gradient(180deg, #ffffff, rgb(211, 204, 205),rgb(156, 152, 152));
+  background-image: linear-gradient(
+    180deg,
+    #ffffff,
+    rgb(211, 204, 205),
+    rgb(156, 152, 152)
+  );
   border: solid white;
-
-
 }
-.car:hover > .car-content{
+.car:hover > .car-content {
   opacity: 1;
   transform: translate(-20px);
   margin-left: 20px;
-
 }
-.car-content{
+.car-content {
   transform: translateY(-200px);
   opacity: 0;
   transition: 0.5s;
 }
-.login{
+.login {
   background-color: black;
   min-height: 100vh;
   padding-top: 50px;
 }
-.login label,.login h1{
+.login label,
+.login h1 {
   color: white !important;
   opacity: 0.8;
 }
-.login-form{
-  background-color: #1F1F1F;
+.login-form {
+  background-color: #1f1f1f;
 }
-.login-form input{
+.login-form input {
   background-color: #333333;
   border: none;
   color: white;
   opacity: 0.5;
 }
-.login-logo{
+.login-logo {
   position: absolute;
   left: 0;
   right: 0;
   top: 70%;
   bottom: 50%;
-  transform: translateY(-50%,-50%);
+  transform: translateY(-50%, -50%);
   font-size: 50px;
   opacity: 0.5 !important;
   border-bottom: 1px dashed;
 }
 
- .login a{
-   color: white;
-   opacity: 0.5;
- }
+.login a {
+  color: white;
+  opacity: 0.5;
+}
 
- .carimg-bookingcar{
-  height:400px;
+.carimg-bookingcar {
+  height: 400px;
   border-radius: 10px;
   width: auto;
-
-  
+  box-shadow: rgba(255, 255, 255, 0.856) 0px 0px 0px 3px;
 }
-.footer{
+.footer {
   background-color: black;
 }
-
