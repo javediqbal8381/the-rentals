@@ -20,29 +20,21 @@ function Usersinadmin() {
       {users.map((user, index) => {
         return (
           <div key={index} className="user-card-in-admin">
-            <h3>
-              User Name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              &nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {user.username}
-            </h3>
-            <h3>
-              User Email &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
-              :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {user.useremail}
-            </h3>
-            <h3>
-              User Phone
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{' '}
-              {user.userphone}
-            </h3>
-            <h3>
-              User CNIC &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
-              :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {user.usercnic}
-            </h3>
+            <div>
+              <h5>Username</h5>
+              <h5>Email</h5>
+              <h5>Phone</h5>
+              <h5>CNIC</h5>
+            </div>
+            <div>
+              <h5>{user.username}</h5>
+              <h5>{user.useremail}</h5>
+              <h5>{user.userphone}</h5>
+              <h5>{user.usercnic}</h5>
+            </div>
           </div>
         );
       })}{' '}
-      <Link className="go-back-admin" to="/admin">
-        Home
-      </Link>
     </DefaultLayout>
   );
 }

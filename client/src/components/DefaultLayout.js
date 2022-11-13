@@ -103,7 +103,7 @@ function DefaultLayout(props) {
         </Row>
       </div>
 
-      <button
+      {/* <button
         className="blinkslights"
         onClick={blinkLights}
         style={{
@@ -113,73 +113,106 @@ function DefaultLayout(props) {
           height: '10px',
           width: '20px',
         }}
-      ></button>
+      ></button> */}
       <div className="blinking">
         {lights && <p className="blinking-light-left">o</p>}
         {lights && <p className="blinking-light-right">o</p>}
       </div>
 
       <div className="contentz">{props.children}</div>
-      <div className="footer-in-home">
-        <div className="footer-left">
-          <Link>
-            <h6>FAQs</h6>
-          </Link>
-          <Link to="/contactus">
-            <h6>Contact Us</h6>
-          </Link>
-          <Link>
-            <h6>Write blog</h6>
-          </Link>
-          <Link>
-            {' '}
-            <h6>Help</h6>
-          </Link>
-        </div>
-        <div className="footer-center">
-          <br></br>
-          <h4>Rent a Car</h4>
-          <br />
-          <div id="f-c-btom-pc">
-            <h5>developed by</h5>
-            <h6>
-              <br />
-              Javed Iqbal &nbsp; &nbsp;| &nbsp;&nbsp; Qazi Awais Akhtar &nbsp;
-              &nbsp;|&nbsp; &nbsp; Farman shah
-            </h6>
-          </div>
+      <footer className="site-footer">
+        <div className="container">
+          <div className="row">
+            <div className="col-sm-12 col-md-6">
+              <h6>About</h6>
+              <p className="text-justify">
+                The Rentals is a platform where we can easily hire or rent a
+                ride. Nowadays, there is Online Car Rental which gives much
+                benefit to user. A rental service is a service which customers
+                arrive to request the hire of a rental unit. It is more
+                convenient than carrying the cost of owning and maintaining the
+                unit. The Renals is a company that rent automobiles for short
+                period of time for a fee for few hours or for few days or week
+              </p>
+            </div>
 
-          <div id="f-c--btom-mobbile">
-            {' '}
-            <h5>developed by</h5>{' '}
-            <h6>
-              <br />
-              Javed Iqbal <br /> Qazi Awais Akhtar
-              <br />
-              Farman shah
-            </h6>
+            <div className="col-xs-6 col-md-3">
+              <h6>Developers</h6>
+              <ul className="footer-links">
+                <li>
+                  <a href="/">Javed Iqbal</a>
+                </li>
+                <br></br>
+                <li>
+                  <a href="/">Qazi Awais</a>
+                </li>
+                <br></br>
+
+                <li>
+                  <a href="/">Farman Shah</a>
+                </li>
+              </ul>
+            </div>
+
+            <div className="col-xs-6 col-md-3">
+              <h6>Quick Links</h6>
+              <ul className="footer-links">
+                <li>
+                  <Link to="/aboutus">About Us</Link>
+                </li>
+                <br></br>
+
+                <li>
+                  <Link to="/contactus">Contact Us</Link>
+                </li>
+                <br></br>
+
+                <li>
+                  <a href="http://scanfcode.com/privacy-policy/">
+                    Privacy Policy
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <hr />
+        </div>
+        <div className="container">
+          <div className="row">
+            <div className="col-md-8 col-sm-6 col-xs-12">
+              <p className="copyright-text">
+                Copyright &copy; 2022 All Rights Reserved by
+                <Link to="/"> The Rentals</Link>.
+              </p>
+            </div>
+
+            <div className="col-md-4 col-sm-6 col-xs-12">
+              <ul className="social-icons">
+                <li>
+                  <a className="socl-icon" href="https://web.whatsapp.com/">
+                    <ImWhatsapp />
+                  </a>
+                </li>
+                <li>
+                  <a className="socl-icon" href="https://www.facebook.com/">
+                    <GrFacebook />
+                  </a>
+                </li>
+                <li>
+                  <a className="socl-icon" href="https://www.linkedin.com/">
+                    <GrLinkedin />
+                  </a>
+                </li>
+                <li>
+                  <a className="socl-icon" href="https://mail.google.com/mail/">
+                    <SiGmail />
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
-        <div className="footer-right">
-          <a className="socl-icon" href="https://web.whatsapp.com/">
-            <ImWhatsapp />
-            <span> Whatsapp</span>
-          </a>{' '}
-          <br />
-          <a className="socl-icon" href="https://www.facebook.com/">
-            <GrFacebook /> <span>facebook</span>
-          </a>{' '}
-          <br />
-          <a className="socl-icon" href="https://www.linkedin.com/">
-            <GrLinkedin />
-            <span> Linkedin</span>
-          </a>{' '}
-          <br />
-          <a className="socl-icon" href="https://mail.google.com/mail/">
-            <SiGmail /> <span>Google</span>
-          </a>
-        </div>
-      </div>
+      </footer>
     </div>
   );
 }

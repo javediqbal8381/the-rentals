@@ -1,57 +1,89 @@
-import axios  from 'axios';
-import React,{useState} from 'react'
+import axios from 'axios';
+import React, { useState } from 'react';
 import DefaultLayout from '../components/DefaultLayout';
-import './autocare.css'
-
-
-
-
-
+import { toast, ToastContainer } from 'react-toastify';
+import './autocare.css';
 
 function Autocare() {
-
-  const postCar =(e)=>{
+  const postCar = (e) => {
     e.preventDefault();
-    axios.post('api/autocare/addcartoautocare',
-   { name,number,problem}
-   ).then(res =>console.log('car added',res)).catch(err => console.log(err))
+    axios
+      .post('api/autocare/addcartoautocare', {
+        username,
+        mobileno,
+        carname,
+        address,
+        time,
+        problem,
+      })
+      .then((res) => toast('your order is palced'))
+      .catch((err) => console.log(err));
+  };
 
-  
- }
+  const [carname, setCarname] = useState('');
+  const [address, setAddress] = useState('');
+  const [time, setTime] = useState('');
+  const [mobileno, setMobileno] = useState('');
+  const [username, setUsername] = useState('');
 
+  const [problem, setProblem] = useState('');
 
+  return (
+    <div>
+      <DefaultLayout>
+        <ToastContainer />
+        <div className="autocare-container">
+          <div className="autocare-form">
+            <h2 style={{ color: 'white', marginLeft: '27%' }}>
+              Fill out the form
+            </h2>
+            <div className="inputs-in-autocare">
+              <h6 style={{ color: 'white' }}>Your Name</h6>
+              <input
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
+                type="text"
+              />
+              <h6 style={{ color: 'white' }}>Mobile No</h6>
+              <input
+                value={mobileno}
+                onChange={(e) => setMobileno(e.target.value)}
+                type="text"
+              />
+              <h6 style={{ color: 'white' }}>Car Info</h6>
+              <input
+                value={carname}
+                onChange={(e) => setCarname(e.target.value)}
+                type="text"
+              />
 
-  const [name,setName]=useState('')
-  const [number,setNumber]=useState('')
-  const [problem,setProblem]=useState('')
+              <h6 style={{ color: 'white' }}>Enter full Address</h6>
+              <textarea
+                value={address}
+                onChange={(e) => setAddress(e.target.value)}
+                type="text"
+              />
 
-  return (<div >
-    <DefaultLayout>
-    <div className='autocare-container'>
-      
-       <div> <h1>Autocare</h1></div>
-
-       <div>
-        <h2>Fill out the form</h2>
-        <h4>Name</h4>
-        <div  className='inputs-in-autocare'>
-        <input type='text' value={name} onChange={(e)=>setName(e.target.value)}/>
-        
-        <h4>Car number</h4>
-        <input value={number} onChange={(e)=>setNumber(e.target.value)} type='text'/>
-      
-        <h4>Problem</h4>
-        <input value={problem} onChange={(e)=>setProblem(e.target.value)} type="text"/>
-        
+              <h6 style={{ color: 'white' }}>please provide date and time</h6>
+              <input
+                value={time}
+                onChange={(e) => setTime(e.target.value)}
+                type="text"
+              />
+              <h6 style={{ color: 'white' }}>Problem you are facing</h6>
+              <textarea
+                value={problem}
+                onChange={(e) => setProblem(e.target.value)}
+                type="text"
+              />
+            </div>
+            <button onClick={postCar}>submit</button>
+          </div>
+          <img src="https://res.cloudinary.com/ddnrxtthk/image/upload/v1668318904/auto-repair-removebg-preview_nqhy8y.png"></img>
         </div>
-        <button onClick={postCar}>submit</button>
-       </div>
-
-
+      </DefaultLayout>
     </div>
-    </DefaultLayout>
-    </div>
-  )
+  );
 }
 
-export default Autocare
+export default Autocare;

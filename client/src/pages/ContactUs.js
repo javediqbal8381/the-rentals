@@ -32,7 +32,7 @@ function ContactUs() {
 
   return (
     <DefaultLayout>
-      <>
+      <div className="the-rentals-contactus">
         <form className="contactus-container" onSubmit={onFormSubmit}>
           <h1 className="h1-in-contactus">Contact Us</h1>
           <input
@@ -76,7 +76,8 @@ function ContactUs() {
             submit
           </button>
         </form>
-      </>
+        <img src="https://res.cloudinary.com/ddnrxtthk/image/upload/v1668361603/contactus-removebg-preview_alutsy.png" />
+      </div>
     </DefaultLayout>
   );
 }

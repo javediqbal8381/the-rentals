@@ -1,14 +1,14 @@
-const mongoose = require('mongoose')
+const mongoose = require('mongoose');
 
 const autocareSchema = new mongoose.Schema({
-    name: { type: String, required: true },
-    number: { type: Number, required: true },
-    problem: { type: String, required: true }
+  username: { type: String, required: true },
+  mobileno: { type: Number, required: true },
+  carname: { type: String, required: true },
+  address: { type: String, required: true },
+  time: { type: String, required: true },
+  problem: { type: String, required: true },
+});
 
-
-}
-)
-
-const autocareModel = mongoose.model('autocare', autocareSchema)
+const autocareModel = mongoose.model('autocare', autocareSchema);
 
 module.exports = autocareModel;

@@ -51,13 +51,22 @@ function AdminHome() {
             </div>
             <Row justify="center" gutter={15} className="mt-2">
               <Col lg={20} sm={24}>
-                <div className="text-right">
+                <div className="text-right admin-home-buttons">
                   <Link to="/addcar" className="add-car-btn-admin">
                     Add Car
+                  </Link>
+                  <Link to="/getautocare" className="add-car-btn-admin">
+                    AutoCare
                   </Link>
                   <Link to="/allusers" className="add-car-btn-admin">
                     USERS
                   </Link>
+                  <a
+                    href="https://support.google.com/mail/answer/56256?hl=en"
+                    className="add-car-btn-admin"
+                  >
+                    Feedback
+                  </a>
                 </div>
               </Col>
             </Row>

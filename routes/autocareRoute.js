@@ -1,24 +1,23 @@
-const express = require("express")
+const express = require('express');
 const router = express.Router();
-const Autocare = require("../models/autocareModel");
+const Autocare = require('../models/autocareModel');
 
-router.post("/addcartoautocare", async (req, res) => {
+router.post('/addcartoautocare', async (req, res) => {
   try {
     const newautocare = new Autocare(req.body);
     await newautocare.save();
-    res.send("Car added successfully");
+    res.send('your order is placed');
   } catch (error) {
     return res.status(400).json(error);
   }
 });
-router.get('/getcarfromautocare',async(req,res)=>{
-  try{
+router.get('/getcarfromautocare', async (req, res) => {
+  try {
     const autocares = await Autocare.find();
 
-    res.send(autocares)
+    res.send(autocares);
+  } catch (error) {
+    return res.status(400).json(error);
   }
-  catch(error){
-return res.status(400).json(error);
-  }
-})
+});
 module.exports = router;

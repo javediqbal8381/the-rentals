@@ -1,0 +1,35 @@
+.adminautocare-page {
+  height: auto;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+  justify-content: center;
+}
+
+.autocare-card {
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+  height: 60%;
+  padding: 1rem;
+  min-width: 300px;
+  align-items: center;
+  background-color: black;
+  opacity: 0.8;
+  border-radius: 25px;
+}
+
+.getautocare-card-right {
+  text-align: left;
+  flex: 3;
+}
+.getautocare-card-right {
+  text-align: left;
+  flex: 7;
+}
+.getautocare-card-right textarea {
+  font-size: 15px;
+  width: 100%;
+}

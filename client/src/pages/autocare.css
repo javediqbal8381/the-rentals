@@ -1,10 +1,44 @@
-.autocare-container{
-    border: solid red;
-    height: 100vh;
-    display: grid;
-
-    
+.autocare-container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  gap: 3rem;
 }
-.inputs-in-autocare{
-    
+.autocare-container img {
+  width: 70%;
+  flex: 5;
+}
+
+.autocare-form {
+  text-align: left;
+  width: 30%;
+  min-width: 300px;
+  opacity: 0.8;
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.61);
+  border-radius: 40px;
+  flex: 4;
+}
+.autocare-form input {
+  border: none;
+  width: 90%;
+  height: 40px;
+}
+
+.autocare-form textarea {
+  border: none;
+  width: 90%;
+  height: 80px;
+}
+
+.autocare-form button {
+  margin-left: 40%;
+}
+
+@media (max-width: 993px) {
+  .autocare-container img {
+    display: none;
+  }
 }
