@@ -89,15 +89,17 @@ function LandingPage() {
 
           <div className="myrow">
             <div className="myrow1 ">
-              <a href="/landingpage">Fast Service</a>
+              <a href="/landingpage">
+                <img src="https://res.cloudinary.com/ddnrxtthk/image/upload/v1668392682/autocare_hbfbdw.png" />
+              </a>
             </div>
 
             <div className="myrow2">
               <p>
-                The Reantals allows a person to book/reserve a vehicle
-                with/without payment on one end while the company staff handles
-                the transactions, on the other via the Internet. The
-                transactions is secure and handled by using Stripe.
+                The Rentals Provide A smart service to save time of Customer go
+                to the auto care page simply fill the fill the form and the
+                center will send auto mechenic to your address according to your
+                problem.
               </p>
 
               <button className="explore-btn-2">Explore</button>

@@ -53,8 +53,8 @@
   height: 4rem;
   width: 40%;
   color: white;
-  letter-spacing: 0.35em;
-  font-size: 0.7em;
+  letter-spacing: 0.33em;
+  font-size: 0.6em;
   font-weight: bold;
   transition: background-color 0.3s, box-shadow 0.3s, color 0.3s;
 }
@@ -73,5 +73,11 @@
 @media (max-width: 508px) {
   .contactus-container {
     padding: 5%;
+  }
+}
+
+@media (max-width: 829px) {
+  .the-rentals-contactus img {
+    display: none;
   }
 }

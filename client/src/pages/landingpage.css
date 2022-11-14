@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
 .landingpage-ist {
-  background-image: url('https://res.cloudinary.com/ddnrxtthk/image/upload/v1667736787/red_lam_aaredp.jpg');
+  background-image: url('https://res.cloudinary.com/ddnrxtthk/image/upload/v1668321781/2222_sohijd.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -136,7 +136,7 @@
 .nav-btn.v6 .icon-btn span:before,
 .nav-btn.v6 .icon-btn span:after {
   content: '';
-  background: #ff0011;
+  background: #c9000d;
   position: absolute;
   display: block;
   width: 5px;

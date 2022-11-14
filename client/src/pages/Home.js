@@ -4,7 +4,6 @@ import { useSelector, useDispatch } from 'react-redux';
 import { getAllCars } from '../redux/actions/carsAction';
 import { Row, Col, DatePicker } from 'antd';
 import { Link } from 'react-router-dom';
-import logo from '../images/autocare.png';
 import moment from 'moment';
 import './home.css';
 import DefaultLayout from '../components/DefaultLayout';
@@ -92,7 +91,7 @@ function Home() {
             <div className="myrow1 ">
               <Link to="/autocare">
                 {' '}
-                <img src={logo} />
+                <img src="https://res.cloudinary.com/ddnrxtthk/image/upload/v1668392682/autocare_hbfbdw.png" />
               </Link>
             </div>
 

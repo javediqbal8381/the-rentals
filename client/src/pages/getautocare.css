@@ -16,8 +16,7 @@
   padding: 1rem;
   min-width: 300px;
   align-items: center;
-  background-color: black;
-  opacity: 0.8;
+  background-color: rgba(0, 0, 0, 0.712);
   border-radius: 25px;
 }
 
