@@ -34,7 +34,7 @@ function BookingCar({ match }) {
   useEffect(() => {
     setTotalAmount(totalHours * car.rentPerHour);
     if (driver) {
-      setTotalAmount(totalAmount + 50 * totalHours);
+      setTotalAmount(totalAmount + 70 * totalHours);
     }
   }, [driver, totalHours]);
   function selectTimeSlots(values) {
@@ -109,7 +109,10 @@ function BookingCar({ match }) {
                 <div className="car-info">
                   <p> Total Hours : {totalHours}</p>
                   <p>
-                    Rent Per Hour : <b>{car.rentPerHour}</b>
+                    Rent Per Hour : <b>{car.rentPerHour} Rs</b>
+                  </p>
+                  <p>
+                    Driver rate/Hour : <b>70 Rs</b>
                   </p>
                   <Checkbox
                     onChange={(e) => {
@@ -120,7 +123,7 @@ function BookingCar({ match }) {
                       }
                     }}
                   >
-                    <span style={{ color: 'white' }}>Need A Driver</span>
+                    <span style={{ color: 'white' }}>Need a Driver</span>
                   </Checkbox>
                   <h4 style={{ color: 'white' }}>
                     Total Amount : {totalAmount}

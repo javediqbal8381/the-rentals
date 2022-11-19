@@ -3,6 +3,7 @@ import DefaultLayout from '../components/DefaultLayout';
 import { useSelector, useDispatch } from 'react-redux';
 import { getAllCars, deleteCar } from '../redux/actions/carsAction';
 import { Button, Row, Col, DatePicker } from 'antd';
+import { getAllUsers } from '../redux/actions/userAction';
 import Spinner from '../components/Spinner';
 import { Link } from 'react-router-dom';
 import { Popconfirm, message } from 'antd';
@@ -22,9 +23,13 @@ function AdminHome() {
   const { cars } = useSelector((state) => state.carsReducer);
   const { loading } = useSelector((state) => state.alertsReducer);
   const [totalcars, setTotalCars] = useState([]);
+  const { users } = useSelector((state) => state.usersReducer);
   const dispatch = useDispatch();
 
+
   useEffect(() => {
+    dispatch(getAllUsers());
+
     dispatch(getAllCars());
     if (isadmin != adminpass) {
       window.location.href = '/';
@@ -36,6 +41,8 @@ function AdminHome() {
       window.location.href = '/';
     }
   }, [cars]);
+
+
 
   return (
     <>
@@ -49,29 +56,45 @@ function AdminHome() {
             <div>
               <h1 className="admin-h1">A D M I N &nbsp; &nbsp; P A N E L</h1>
             </div>
-            <Row justify="center" gutter={15} className="mt-2">
-              <Col lg={20} sm={24}>
-                <div className="text-right admin-home-buttons">
-                  <Link to="/addcar" className="add-car-btn-admin">
-                    Add Car
-                  </Link>
-                  <Link to="/getautocare" className="add-car-btn-admin">
-                    AutoCare
-                  </Link>
-                  <Link to="/allusers" className="add-car-btn-admin">
-                    USERS
-                  </Link>
-                  <a
-                    href="https://support.google.com/mail/answer/56256?hl=en"
-                    className="add-car-btn-admin"
-                  >
-                    Feedback
-                  </a>
-                </div>
-              </Col>
-            </Row>
+            <div className="mt-2 admin-top-dashbord">
+              <div className='card-in-admin-dashboard'>
+                <img style={{ width: '100%', height: '60%' }} src='https://res.cloudinary.com/ddnrxtthk/image/upload/v1668840008/addcar_bfmmqh.png' />
+                <Link to="/addcar" className="admin-top-dashbord-butons">
+                  Add Car
+                </Link>
+              </div>
+              <div className='card-in-admin-dashboard'>
+                <img style={{ width: '100%', height: '60%' }} src='https://res.cloudinary.com/ddnrxtthk/image/upload/v1668840014/auto-care-logo_w53pxz.webp' />
+                <Link to="/getautocare" className="admin-top-dashbord-butons">
+                  AutoCare
+                </Link></div>
+              <div className='card-in-admin-dashboard'>
+                <img style={{ width: '100%', height: '60%' }} src='https://res.cloudinary.com/ddnrxtthk/image/upload/v1668840020/stripe_dhe60o.png' />
+                <a target='blank'
+                  href="https://dashboard.stripe.com/test/dashboard"
+                  className="admin-top-dashbord-butons"
+                >
+                  Payments
+                </a></div>
+              <div className='card-in-admin-dashboard'>
+                <img style={{ width: '100%', height: '60%' }} src='https://res.cloudinary.com/ddnrxtthk/image/upload/v1668840020/feedback_ic9k5a.jpg' />
 
-            <Row justify="center" gutter={15}>
+                <a target='blank'
+                  href="https://support.google.com/mail/answer/56256?hl=en"
+                  className="admin-top-dashbord-butons"
+                >
+                  Feedback
+                </a></div>
+
+              <div className='card-in-admin-dashboard'>
+                <img style={{ backgroundColor: 'white', width: '100%', height: '60%' }} src='https://res.cloudinary.com/ddnrxtthk/image/upload/v1668838617/userslogo_imegln.svg' />
+                <Link to="/allusers" className="admin-top-dashbord-butons">
+                  {users.length - 1} users
+                </Link>
+              </div>
+            </div>
+
+            <Row className='cars-in-admin' justify="center" gutter={15}>
               {totalcars.map((car) => {
                 return (
                   <Col lg={5} sm={24} xs={24}>
