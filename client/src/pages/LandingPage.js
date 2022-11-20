@@ -17,9 +17,12 @@ function LandingPage() {
   const loading = useSelector((state) => state.alertsReducer);
   const [totalcars, setTotalCars] = useState([]);
   const dispatch = useDispatch();
+  var audio = new Audio('https://res.cloudinary.com/ddnrxtthk/video/upload/v1668917740/confirm-beep_dzetf1.wav');
 
   const tologin = () => {
     toast('please login to book car');
+    audio.play()
+
   };
 
   useEffect(() => {

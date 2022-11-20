@@ -5,6 +5,8 @@ import { toast, ToastContainer } from 'react-toastify';
 import './autocare.css';
 
 function Autocare() {
+  var audio = new Audio('https://res.cloudinary.com/ddnrxtthk/video/upload/v1668917740/confirm-beep_dzetf1.wav');
+
   const postCar = (e) => {
     e.preventDefault();
     axios
@@ -16,7 +18,10 @@ function Autocare() {
         time,
         problem,
       })
-      .then((res) => toast('your order is palced'))
+      .then((res) => {
+        toast('your request is sent')
+        audio.play()
+      })
       .catch((err) => console.log(err));
   };
 

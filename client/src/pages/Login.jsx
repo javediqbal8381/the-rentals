@@ -4,17 +4,28 @@ import { useDispatch, useSelector } from 'react-redux';
 import { userLogin } from '../redux/actions/userAction';
 import './login.css';
 import Spinner from '../components/Spinner';
+import { message } from 'antd';
 
 function Login() {
   const [userphone, setUserphone] = useState(92);
   const [password, setPassword] = useState('');
   const { loading } = useSelector((state) => state.alertsReducer);
+  var audio = new Audio('https://res.cloudinary.com/ddnrxtthk/video/upload/v1668917741/error_tp8ajz.wav');
 
   const dispatch = useDispatch();
-  function onFinish(e) {
+  function onFinish(e) { 
     e.preventDefault();
-    dispatch(userLogin({ userphone, password }));
+    if (userphone.length >=10 && userphone.length < 13 && password.length > 6) {
+      dispatch(userLogin({ userphone, password }));
+
+    } else {
+      message.error('please provide valid credentials')
+      audio.play()
+
+    }
   }
+
+
   return (
     <>
       {loading ? (

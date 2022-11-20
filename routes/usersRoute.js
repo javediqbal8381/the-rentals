@@ -13,7 +13,7 @@ router.post('/login', async (req, res) => {
       return res.status(400).json(error);
     }
   } catch (error) {
-    return res.status(400).json(error);
+    return res.status(400).json({ "message": "Phone number or password invalid" });
   }
 });
 

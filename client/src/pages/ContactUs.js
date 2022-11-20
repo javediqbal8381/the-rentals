@@ -9,6 +9,7 @@ function ContactUs() {
   const [email, setEmail] = useState('');
   const [number, setNumber] = useState('');
   const [message, setMessage] = useState('');
+  var audio = new Audio('https://res.cloudinary.com/ddnrxtthk/video/upload/v1668917740/confirm-beep_dzetf1.wav');
 
   const onFormSubmit = (e) => {
     e.preventDefault();
@@ -22,6 +23,8 @@ function ContactUs() {
       .then(
         (result) => {
           window.confirm(` ${name} your message has been sent  `);
+          audio.play()
+
           window.location.href = '/';
         },
         (error) => {

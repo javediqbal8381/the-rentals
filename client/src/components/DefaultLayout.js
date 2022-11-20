@@ -38,6 +38,7 @@ function DefaultLayout(props) {
       </Menu.Item>
     </Menu>
   );
+
   return (
     <div className="default-layout">
       <div className="header bs1">
@@ -49,7 +50,6 @@ function DefaultLayout(props) {
                   <b>THE RENTALS</b>
                 </Link>
               </h1>
-
               <div className="nav-right">
                 <div className="navbar-buttons">
                   <Link to="/" className="nav-btn v6">
@@ -213,7 +213,7 @@ function DefaultLayout(props) {
           </div>
         </div>
       </footer>
-    </div>
+    </div >
   );
 }
 

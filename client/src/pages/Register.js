@@ -3,6 +3,7 @@ import './register.css';
 import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { userRegister } from '../redux/actions/userAction';
+import { message } from 'antd';
 
 // this ui is copied from login page so the classes names are same
 
@@ -15,18 +16,52 @@ function Register() {
   const [cpassword, setCpassword] = useState('');
 
   const dispatch = useDispatch();
+  var audio = new Audio('https://res.cloudinary.com/ddnrxtthk/video/upload/v1668917741/error_tp8ajz.wav');
 
   function onFinish(e) {
     if (password !== cpassword) {
-      alert('password not matching');
+      message.error('password not matching');
     } else {
       e.preventDefault();
-      dispatch(
-        userRegister({ username, useremail, usercnic, userphone, password })
-      );
-      setTimeout(() => {
-        window.location.href = '/';
-      }, 5000);
+
+      if (username.length > 0 && useremail.length > 0 && password.length > 6 && usercnic.length > 0 && userphone.length > 0) {
+
+
+        if (usercnic.length == 13) {
+
+          if (userphone.length >= 10 && userphone.length < 12) {
+            if (useremail.includes('@')) {
+              dispatch(
+                userRegister({ username, useremail, usercnic, userphone, password })
+              );
+
+            } else {
+              message.error('Please enter valid email')
+
+            }
+          } else {
+            message.error('Please enter valid phone number')
+
+          }
+
+
+        } else {
+          message.error('Please enter valid CNIC')
+
+        }
+
+
+
+      } else {
+        message.error('Please fill all the fields')
+        audio.play()
+
+      }
+
+
+
+
+
     }
   }
 
