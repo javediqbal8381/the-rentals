@@ -3,7 +3,6 @@ import { message } from 'antd'
 
 
 export const userLogin = (reqObj) => async dispatch => {
-    var audio = new Audio('https://res.cloudinary.com/ddnrxtthk/video/upload/v1668917740/confirm-beep_dzetf1.wav');
 
     dispatch({ type: 'LOADING', payload: true })
 
@@ -17,7 +16,6 @@ export const userLogin = (reqObj) => async dispatch => {
 
             dispatch({ type: 'LOADING', payload: false })
         }, 500);
-        audio.play()
 
     } catch (error) {
 

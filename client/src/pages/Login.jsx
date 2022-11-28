@@ -13,9 +13,9 @@ function Login() {
   var audio = new Audio('https://res.cloudinary.com/ddnrxtthk/video/upload/v1668917741/error_tp8ajz.wav');
 
   const dispatch = useDispatch();
-  function onFinish(e) { 
+  function onFinish(e) {
     e.preventDefault();
-    if (userphone.length >=10 && userphone.length < 13 && password.length > 6) {
+    if (userphone.length >= 10 && userphone.length < 13 && password.length > 6) {
       dispatch(userLogin({ userphone, password }));
 
     } else {

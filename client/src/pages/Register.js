@@ -16,7 +16,6 @@ function Register() {
   const [cpassword, setCpassword] = useState('');
 
   const dispatch = useDispatch();
-  var audio = new Audio('https://res.cloudinary.com/ddnrxtthk/video/upload/v1668917741/error_tp8ajz.wav');
 
   function onFinish(e) {
     if (password !== cpassword) {
@@ -54,7 +53,6 @@ function Register() {
 
       } else {
         message.error('Please fill all the fields')
-        audio.play()
 
       }
 

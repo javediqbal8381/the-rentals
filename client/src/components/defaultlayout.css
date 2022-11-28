@@ -17,8 +17,11 @@
   font-family: 'Orbitron', sans-serif;
 }
 .header {
-  padding: 10px;
-  background-color:rgba(0, 0, 0, 0.274);
+  padding: 5px;
+  background-color:rgba(65, 60, 60, 0.534);
+  height: 12vh;
+  box-shadow: 1px 1px 20px 5px rgb(61, 56, 56);
+
   /* background-image: linear-gradient(to right, rgb(255, 145, 0) ,rgb(247, 212, 18), rgb(255, 251, 1),rgb(234, 250, 90)); */
 }
 .default-layout {
