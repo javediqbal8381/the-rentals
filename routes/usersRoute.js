@@ -2,15 +2,16 @@ const express = require('express');
 const router = express.Router();
 const User = require('../models/userModel');
 const bcrypt = require('bcryptjs')
-const encryptedpass = require('../midlewares/Passwordmidlewere')
+// const encryptedpass = require('../midlewares/Passwordmidlewere')
 
 router.post('/login', async (req, res) => {
   const { userphone, password } = req.body;
   try {
     const user = await User.findOne({ userphone });
-    const userverified = await bcrypt.compare(password, user.password)
+    // const userverified = await bcrypt.compare(password, user.password)
+
     if (user) {
-      if (userverified) {
+      if (user.password == req.body.password) {
         res.send(user);
       } else {
         return res.status(400).json({ 'message': "You entred worng password" });
@@ -23,7 +24,7 @@ router.post('/login', async (req, res) => {
   }
 });
 
-router.post('/register', encryptedpass, async (req, res) => {
+router.post('/register', async (req, res) => {
   try {
 
     const newuser = new User({
